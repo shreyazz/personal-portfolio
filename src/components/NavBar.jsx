@@ -5,7 +5,7 @@ import { Nav } from "../styles/NavBar";
 const NavBar = ({ theme }) => {
   return (
     <>
-      <Nav theme={"dark"}>
+      <Nav theme={theme}>
         <div className="left-nav">
           <Link to={"/"}>Shreyas</Link>
         </div>

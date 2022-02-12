@@ -1,6 +1,11 @@
 import React from "react";
-const LandingPage = () => {
-  return <></>;
+import { LanidingPageWrapper } from "../styles/LandingPage";
+const LandingPage = ({ theme }) => {
+  return (
+    <>
+      <LanidingPageWrapper theme={theme}></LanidingPageWrapper>
+    </>
+  );
 };
 
 export default LandingPage;
