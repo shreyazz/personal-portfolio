@@ -5,3 +5,14 @@
   transition: background 0.3s ease-in;
   font-family: "Montserrat", sans-serif, monospace;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(134, 134, 134, 0.678);
+}
+.eve {
+  color: #302f2f;
+}

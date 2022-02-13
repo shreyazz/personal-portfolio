@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Nav } from "../styles/NavBar";
 
 const NavBar = ({ theme }) => {
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <>
-      <Nav theme={theme}>
+      <Nav theme={theme} showMenu={showMenu}>
         <div className="left-nav">
           <Link to={"/"}>Shreyas</Link>
         </div>
         <div className="right-nav">
+          <Link to={"/projects"}>Projects</Link>
+          <Link to={"/blogs"}>Blogs</Link>
+          <Link to={"/about-me"}>About Me</Link>
+          <Link to={"/contact-me"}>Contact Me</Link>
+        </div>
+
+        <div
+          className={`${
+            showMenu ? "close-ham-menu" : "open-ham-menu"
+          } hamburger-menu`}
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          <div className="line-1"></div>
+          <div className="line-2"></div>
+          <div className="line-3"></div>
+        </div>
+
+        <div className={`${showMenu && "open-menu"} mobile-menu`}>
           <Link to={"/projects"}>Projects</Link>
           <Link to={"/blogs"}>Blogs</Link>
           <Link to={"/about-me"}>About Me</Link>
