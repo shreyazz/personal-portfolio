@@ -104,6 +104,10 @@ export const Nav = styled.nav`
     flex-direction: row;
     align-items: center;
 
+    .left-nav a {
+      font-size: 25px;
+    }
+
     .toggler {
       display: none;
     }
@@ -145,6 +149,25 @@ export const Nav = styled.nav`
       font-size: 1.15rem;
       color: ${({ theme }) => (theme === "light" ? "#1E1E1E" : "#E8E8E8")};
       position: relative;
+    }
+
+    .toggler {
+      position: relative;
+      padding: 1rem;
+      height: 33px;
+      border-radius: 1rem;
+      width: 80px;
+      background: ${({ theme }) => (theme === "dark" ? "#302f2f" : "#d1d1d1")};
+      box-shadow: ${({ theme }) =>
+        theme === "light"
+          ? `-5px -6px 4px rgba(255, 255, 255, 0.25),
+      5px 5px 4px rgba(63, 63, 63, 0.19),
+      inset 9px 7px 4px rgba(63, 63, 63, 0.19),
+      inset -5px -4px 9px 11px rgba(255, 255, 255, 0.15)`
+          : `-2px -2px 4px #131313, 3px 3px 4px #181818,
+    inset 9px 7px 4px rgba(40, 40, 40, 0.274),
+    inset -5px -4px 9px 11px rgba(24, 24, 24, 0.192)`};
+      transition: all 0.2s ease-in;
     }
 
     .mobile-menu a:after {

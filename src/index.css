@@ -13,3 +13,7 @@
 ::-webkit-scrollbar-thumb {
   background-color: rgba(134, 134, 134, 0.678);
 }
+
+.ev {
+  color: rgba(82, 82, 82, 0.356);
+}
