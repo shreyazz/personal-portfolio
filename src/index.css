@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: background 0.3s ease-in;
+  transition: background 0.2s ease-in;
   font-family: "Montserrat", sans-serif, monospace;
 }
 
@@ -12,7 +12,4 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: rgba(134, 134, 134, 0.678);
-}
-.eve {
-  color: #302f2f;
 }

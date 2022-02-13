@@ -5,21 +5,16 @@ import LandingPage from "./pages/LandingPage";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
+  function getTheme(themeMode) {
+    setTheme(themeMode);
+  }
   return (
     <>
-      <NavBar theme={theme} />
+      <NavBar theme={theme} getThemeFunc={getTheme} />
       <Routes>
         <Route path="/" index element={<LandingPage theme={theme} />} />
         <Route path="*" element={<div>404 PAGE NOT FOUND</div>} />
       </Routes>
-      <div className="toggler">
-        <div className="toggleLight" onClick={() => setTheme("light")}>
-          Light
-        </div>
-        <div className="toggleDark" onClick={() => setTheme("dark")}>
-          Dark
-        </div>
-      </div>
     </>
   );
 };

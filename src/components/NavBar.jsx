@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Nav } from "../styles/NavBar";
 
-const NavBar = ({ theme }) => {
+const NavBar = ({ theme, getThemeFunc }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   return (
     <>
       <Nav theme={theme} showMenu={showMenu}>
@@ -17,6 +18,15 @@ const NavBar = ({ theme }) => {
           <Link to={"/contact-me"}>Contact Me</Link>
         </div>
 
+        <div
+          className="toggler"
+          onClick={() => {
+            setIsDark(!isDark);
+            isDark ? getThemeFunc("dark") : getThemeFunc("light");
+          }}
+        >
+          <div className={`${isDark ? "goRight" : ""} toggle-ball`}></div>
+        </div>
         <div
           className={`${
             showMenu ? "close-ham-menu" : "open-ham-menu"
@@ -33,6 +43,15 @@ const NavBar = ({ theme }) => {
           <Link to={"/blogs"}>Blogs</Link>
           <Link to={"/about-me"}>About Me</Link>
           <Link to={"/contact-me"}>Contact Me</Link>
+          <div
+            className="toggler"
+            onClick={() => {
+              setIsDark(!isDark);
+              isDark ? getThemeFunc("dark") : getThemeFunc("light");
+            }}
+          >
+            <div className={`${isDark ? "goRight" : ""} toggle-ball`}></div>
+          </div>
         </div>
       </Nav>
     </>

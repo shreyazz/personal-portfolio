@@ -52,8 +52,47 @@ export const Nav = styled.nav`
     display: none;
   }
 
+  .toggler {
+    position: relative;
+    padding: 1rem;
+    height: 33px;
+    border-radius: 1rem;
+    width: 80px;
+    background: ${({ theme }) => (theme === "dark" ? "#222222" : "#E8E8E8")};
+    box-shadow: ${({ theme }) =>
+      theme === "light"
+        ? `-5px -6px 4px rgba(255, 255, 255, 0.25),
+      5px 5px 4px rgba(63, 63, 63, 0.19),
+      inset 9px 7px 4px rgba(63, 63, 63, 0.19),
+      inset -5px -4px 9px 11px rgba(255, 255, 255, 0.35)`
+        : `-2px -2px 4px #131313, 3px 3px 4px #181818,
+    inset 9px 7px 4px rgba(40, 40, 40, 0.774),
+    inset -5px -4px 9px 11px rgba(24, 24, 24, 0.492)`};
+    transition: all 0.2s ease-in;
+  }
+
+  .toggle-ball {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    height: 26px;
+    width: 26px;
+    left: 0.35rem;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background: #5d55fa;
+    box-shadow: -3px -2px 4px rgba(72, 72, 72, 0.22),
+      3px 3px 4px rgba(35, 35, 35, 0.13);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .goRight {
+    left: 2.95rem;
+    transition: all 0.3s ease-in-out;
+  }
+
   @media only screen and (max-width: 85em) {
-    padding: 3rem 1rem;
+    padding: 1rem;
     height: auto;
     flex-direction: column;
     gap: 3rem;
@@ -64,6 +103,11 @@ export const Nav = styled.nav`
     height: auto;
     flex-direction: row;
     align-items: center;
+
+    .toggler {
+      display: none;
+    }
+
     .right-nav {
       display: none;
     }
@@ -84,9 +128,13 @@ export const Nav = styled.nav`
       z-index: 4;
       border-radius: 1rem;
       transition: all 7.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+      .toggler {
+        display: inline-block;
+      }
     }
 
     .open-menu {
+      background: ${({ theme }) => (theme === "dark" ? "#302f2f" : "#d1d1d1")};
       transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
       top: 8rem;
     }
