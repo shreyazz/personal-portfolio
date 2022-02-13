@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Nav } from "../styles/NavBar";
 
+
 const NavBar = ({ theme, getThemeFunc }) => {
+
+
   const [showMenu, setShowMenu] = useState(false);
   const [isDark, setIsDark] = useState(true);
   return (
@@ -11,7 +14,7 @@ const NavBar = ({ theme, getThemeFunc }) => {
         <div className="left-nav">
           <Link to={"/"}>Shreyas</Link>
         </div>
-        <div className="right-nav">
+        <div className="right-nav" >
           <Link to={"/projects"}>Projects</Link>
           <Link to={"/blogs"}>Blogs</Link>
           <Link to={"/about-me"}>About Me</Link>
@@ -38,7 +41,9 @@ const NavBar = ({ theme, getThemeFunc }) => {
           <div className="line-3"></div>
         </div>
 
-        <div className={`${showMenu && "open-menu"} mobile-menu`}>
+        <div
+          className={`${showMenu && "open-menu"} mobile-menu`}
+        >
           <Link to={"/projects"}>Projects</Link>
           <Link to={"/blogs"}>Blogs</Link>
           <Link to={"/about-me"}>About Me</Link>

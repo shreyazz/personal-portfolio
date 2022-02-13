@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { LanidingPageWrapper } from "../styles/LandingPage";
 import leftImageDark from "../assets/left-image-polygon-dark.svg";
 import leftImageLight from "../assets/left-image-polygon.svg";
@@ -7,19 +7,37 @@ import project from "../assets/projects.svg";
 import eye from "../assets/eye.svg";
 import Button from "../components/Button";
 import sqr from "../assets/sqr.svg";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const LandingPage = ({ theme }) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
       <LanidingPageWrapper theme={theme}>
         <img src={sqr} alt="" className="right-img" />
 
         {theme === "dark" ? (
-          <img src={leftImageDark} alt="" className="left-img" />
+          <img
+            src={leftImageDark}
+            alt=""
+            className="left-img"
+            data-aos="fade-up"
+          />
         ) : (
-          <img src={leftImageLight} alt="" className="left-img" />
+          <img
+            src={leftImageLight}
+            alt=""
+            className="left-img"
+            data-aos="fade-up"
+          />
         )}
 
-        <div className="hero">
+        <div className="hero" data-aos="zoom-in-up">
           <h1>
             {" "}
             Hey 👋🏻 , I am <span className="blue"> SHREYAS </span>
@@ -35,7 +53,7 @@ const LandingPage = ({ theme }) => {
               img={project}
               text={"VIEW PROJECTS"}
               LinkOrButton="link"
-              whereTo={"project"}
+              whereTo={"projects"}
             />
             <Button
               img={eye}
