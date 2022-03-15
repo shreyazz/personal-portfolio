@@ -8,7 +8,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   background: ${({ theme }) => (theme === "dark" ? "#1E1E1E" : "#E8E8E8")};
-
+  overflow: hidden;
   .left-nav a {
     color: #5d55fa;
     font-size: 30px;
@@ -95,15 +95,13 @@ export const Nav = styled.nav`
     padding: 1rem;
     height: auto;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
   }
 
   @media only screen and (max-width: 30em) {
     padding: 1rem 1.5rem;
-    height: auto;
     flex-direction: row;
     align-items: center;
-
     .left-nav a {
       font-size: 25px;
     }
@@ -268,4 +266,13 @@ export const Nav = styled.nav`
       }
     }
   }
+`;
+
+export const MobileNav = styled.div`
+  height: 10vh;
+  width: 10vh;
+  position: absolute;
+  background-color: red;
+  z-index: -1;
+  /* right: 0; */
 `;

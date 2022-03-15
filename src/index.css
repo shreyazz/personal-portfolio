@@ -14,6 +14,50 @@
   background-color: rgba(134, 134, 134, 0.678);
 }
 
+.blue {
+  color: #5d55fa;
+  font-weight: 700;
+  width: 100px;
+}
+
 .ev {
-  color: rgba(82, 82, 82, 0.356);
+  color: #b8b5f1ea;
+  color: #131313be;
+  color: #dadada;
+}
+
+.loading {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate 3s linear infinite;
+  border-radius: 1.24rem;
+}
+.blinker {
+  height: 60%;
+  width: 60%;
+  border-radius: 50%;
+  animation: blink 3s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blink {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.25);
+  }
 }

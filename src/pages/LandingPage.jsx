@@ -22,19 +22,9 @@ const LandingPage = ({ theme }) => {
         <img src={sqr} alt="" className="right-img" />
 
         {theme === "dark" ? (
-          <img
-            src={leftImageDark}
-            alt=""
-            className="left-img"
-            data-aos="fade-up"
-          />
+          <img src={leftImageDark} alt="" className="left-img" />
         ) : (
-          <img
-            src={leftImageLight}
-            alt=""
-            className="left-img"
-            data-aos="fade-up"
-          />
+          <img src={leftImageLight} alt="" className="left-img" />
         )}
 
         <div className="hero" data-aos="zoom-in-up">

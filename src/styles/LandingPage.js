@@ -136,17 +136,22 @@ export const LanidingPageWrapper = styled.div`
 
   @media only screen and (max-width: 85em) {
     padding: 1.25rem 4rem;
+    .btn-group {
+      width: 70%;
+    }
   }
 
   @media only screen and (max-width: 30em) {
     height: 91vh;
-
     padding: 0.68rem;
     .hero {
+      text-align: center;
       width: 100%;
-      margin-bottom: 9rem;
+      margin: 0 auto 9rem auto;
+
       h1 {
-        font-size: 28px;
+        font-size: 26px;
+        margin-left: 0.5rem;
       }
       p {
         width: 100%;
