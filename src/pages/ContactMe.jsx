@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { ContactMePageWrapper } from "../styles/ContactMeElements";
 import mailIcon from "../assets/mail.svg";
 const ContactMe = ({ theme }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [body, setBody] = useState("");
+
+  const handleChange = (e) => {
+    const id = e.target.id;
+    let value = e.target.value;
+    if (id === "name") {
+      setName(value);
+    } else if (id === "email") {
+      setEmail(value);
+    } else if (id === "subject") {
+      setSubject(value);
+    } else if (id === "body") {
+      setBody(value);
+    }
+  };
+
   const greetMessages = [
     "Let's create something together 🚀",
     "Don't hesitate to reach out 👋🏻",
@@ -27,18 +46,39 @@ const ContactMe = ({ theme }) => {
       <div className="right-contact">
         <h2>Send Me a Message 🚀</h2>
         <div>
-          <input type="text" placeholder="Full name" />
-          <input type="text" placeholder="Email" />
-          <input type="text" placeholder="Subject" />
+          <input
+            type="text"
+            placeholder="Full name"
+            id="name"
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            placeholder="Email"
+            id="email"
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            placeholder="Subject"
+            id="subject"
+            onChange={handleChange}
+          />
           <textarea
-            name=""
-            id=""
+            id="body"
             cols="55"
             rows="10"
             placeholder="Message"
+            onChange={handleChange}
           ></textarea>
         </div>
-        <button>Send Message</button>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`mailto:pahuneshreyas@gmail.com?subject=${subject}&body=${body} %0D%0A%0D%0ASender's Details: %0D%0AEmail: ${email}%0D%0AName: ${name} `}
+        >
+          Send Message
+        </a>
       </div>
     </ContactMePageWrapper>
   );

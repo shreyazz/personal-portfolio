@@ -17,7 +17,7 @@ const Projects = ({ theme }) => {
       {!isLoading ? (
         projects.map((project, id) => {
           return (
-            <ProjectCardWrapper key={id} theme={theme}>
+            <ProjectCardWrapper key={id.toString()} theme={theme}>
               <img src={project.image} alt="" />
               <h1>{project.name}</h1>
               <p>{project.desc}</p>

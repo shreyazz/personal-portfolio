@@ -111,8 +111,9 @@ export const AboutWrapper = styled.div`
 
   @media only screen and (max-width: 85em) {
     padding: 1.25rem 4rem;
-    height: 88vh;
+    height: auto;
     padding: 0.68rem;
+    padding-bottom: 8rem;
 
     flex-direction: column;
     .left-about,

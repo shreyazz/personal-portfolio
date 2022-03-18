@@ -86,11 +86,14 @@ export const ContactMePageWrapper = styled.div`
       border: 2px solid #5d55fa;
     }
 
-    button {
+    a {
       color: #f0f0f0;
+      text-decoration: none;
       margin-top: 1.45rem;
-      width: 7.74rem;
-      padding: 0.65rem;
+      width: 8.55rem;
+      text-align: center;
+      padding: 0.55rem;
+      font-size: 15px;
       background-color: #5d55fa;
       border: none;
       border-radius: 0.15rem;
@@ -99,7 +102,7 @@ export const ContactMePageWrapper = styled.div`
       transition: all 0.2s ease-in-out;
     }
 
-    button:hover {
+    a:hover {
       transform: scale(1.05);
       transition: all 0.2s ease-in-out;
     }
@@ -114,12 +117,15 @@ export const ContactMePageWrapper = styled.div`
       width: 100%;
       height: 20%;
       text-align: center;
+
       h1 {
         font-size: 25px;
       }
+
       h2 {
         font-size: 18px;
       }
+
       .mailContact {
         text-align: left;
         margin: 0 auto;

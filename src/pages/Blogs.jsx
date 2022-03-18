@@ -22,7 +22,9 @@ const Blogs = ({ theme }) => {
     <>
       <BlogPageWrapper theme={theme}>
         {!isLoading ? (
-          blogs.map((blog) => <BlogCard theme={theme} blog={blog} />)
+          blogs.map((blog, id) => (
+            <BlogCard key={id.toString()} theme={theme} blog={blog} />
+          ))
         ) : (
           <div className="loading">
             {" "}
