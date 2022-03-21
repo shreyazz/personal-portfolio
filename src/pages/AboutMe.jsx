@@ -35,7 +35,13 @@ const AboutMe = ({ theme }) => {
           </div>
           <div className="socials">
             {socialIcons.map((image, index) => (
-              <a href={image.href} target="_blank" rel="noreferrer" key={index} className="social-a">
+              <a
+                href={image.href}
+                target="_blank"
+                rel="noreferrer"
+                key={index}
+                className="social-a"
+              >
                 {" "}
                 <img
                   key={index}
@@ -79,7 +85,7 @@ const AboutMe = ({ theme }) => {
                 img={eye}
                 text={"VIEW RESUME"}
                 LinkOrButton="a"
-                href="https://www.google.com"
+                href="https://docs.google.com/document/d/1bLfDCsIx1UftuL2LunQwCtIr6qQEnqXvmXl9BcmXCpU"
               />
             </div>
           </div>
