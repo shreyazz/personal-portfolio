@@ -24,6 +24,7 @@ export const AboutWrapper = styled.div`
 
   .btn-link {
     padding: 1rem;
+
     border-radius: 0.25rem;
     background: ${({ theme }) => (theme === "dark" ? "#1E1E1E" : "#E5E5E5")};
     box-shadow: ${({ theme }) =>

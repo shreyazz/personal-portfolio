@@ -6,6 +6,7 @@ import LandingPage from "./pages/LandingPage";
 import BlogPageWrapper from "./pages/Blogs";
 import Projects from "./pages/Projects";
 import ContactMe from "./pages/ContactMe";
+import Error from "./pages/Error";
 
 const App = () => {
   const [theme, setTheme] = useState("dark");
@@ -21,7 +22,7 @@ const App = () => {
         <Route path="/blogs" element={<BlogPageWrapper theme={theme} />} />
         <Route path="/projects" element={<Projects theme={theme} />} />
         <Route path="/contact-me" element={<ContactMe theme={theme} />} />
-        <Route path="*" element={<div>404 PAGE NOT FOUND</div>} />
+        <Route path="*" element={<Error theme={theme} />} />
       </Routes>
     </>
   );
