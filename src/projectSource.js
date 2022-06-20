@@ -6,7 +6,26 @@ import weather from "./assets/weather.png";
 import crypto from "./assets/cryptoDash-1.png";
 import devBot from "./assets/dev-bot.png";
 import gimmeGif from "./assets/gimmeGif.png";
+import genieWeb from "./assets/genieWeb.png";
+import randomPass from "./assets/randomPass.png";
 export const projectSource = [
+  {
+    name: "Genie CLI",
+    desc: "Genie is an utility CLI that makes the life of a developer easy by doing the boring and monotonous tasks.",
+    link: "https://www.npmjs.com/package/@shreyazz/genie",
+    repo: "https://github.com/shreyazz/genie-cli",
+    image: genieWeb,
+    wip: true,
+  },
+  {
+    name: "CRYPTO-DASH",
+    desc: "CryptoDash is a website where you can track your favorite cryptos.",
+    link: "https://github.com/shreyazz/CryptoDASH",
+    repo: "https://github.com/shreyazz/CryptoDASH",
+    image: crypto,
+
+    wip: true,
+  },
   {
     name: "DEV-DASH",
     desc: "It is a dev.to dashboard which visually represents the stats of your blogs using graphs. It also lists out the blogs of an author.",
@@ -16,13 +35,13 @@ export const projectSource = [
     wip: false,
   },
   {
-    name: "CRYPTO-DASH",
-    desc: "CryptoDash is a website where you can track your favourite cryptos.",
-    link: "https://github.com/shreyazz/CryptoDASH",
-    repo: "https://github.com/shreyazz/CryptoDASH",
-    image: crypto,
+    name: "Random Pass Package",
+    desc: "This is package which lets you generate random passwords with options like, length and should it contain: numbers / letters / special chars.",
+    link: "https://www.npmjs.com/package/@shreyazz/random_pass",
+    repo: "https://github.com/shreyazz/random-pass-package",
+    image: randomPass,
 
-    wip: true,
+    wip: false,
   },
   {
     name: "QR-IT",
