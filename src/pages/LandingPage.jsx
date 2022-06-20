@@ -49,7 +49,7 @@ const LandingPage = ({ theme }) => {
               img={eye}
               text={"VIEW RESUME"}
               LinkOrButton="a"
-              href="https://docs.google.com/document/d/1bLfDCsIx1UftuL2LunQwCtIr6qQEnqXvmXl9BcmXCpU"
+              href="https://drive.google.com/file/d/145YnBNKofg12K3SrpHF9Jz6bsWYVFqhg/view"
             />
           </div>
         </div>
