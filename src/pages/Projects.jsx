@@ -17,18 +17,20 @@ const Projects = ({ theme }) => {
       {!isLoading ? (
         projects.map((project, id) => {
           return (
-            <ProjectCardWrapper key={id.toString()} theme={theme}>
-              <img src={project.image} alt="" />
+            <ProjectCardWrapper key={id.toString()} theme={theme} className={project.wip && 'wip-div'}>
+              <img src={project.image} alt=""/>
+              {project.wip && <div class="ribbon ribbon-top-right"><span>Work in progress</span></div>}
+              <div className="wip"></div>
               <h1>{project.name}</h1>
               <p>{project.desc}</p>
-              <div className="links">
+              {!project.wip && <div className="links">
                 <a href={project.link} target="_blank" rel="noreferrer">
                   <p>Use It</p>
                 </a>
                 <a href={project.repo} target="_blank" rel="noreferrer">
                   <p>Repository</p>
                 </a>
-              </div>
+              </div>}
             </ProjectCardWrapper>
           );
         })
